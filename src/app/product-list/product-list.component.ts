@@ -22,6 +22,6 @@ export class ProductListComponent {
 
   }
   testurl(product){
-    this.router.navigate([`/product/${product.id}`,{ outlets: {'sidebar': ['chat'] } }]);
+    this.router.navigate([`/product/${product.id}`,{ outlets: {'chat': ['chat'] } }]);
   }
 }

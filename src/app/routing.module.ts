@@ -9,9 +9,13 @@ const routes: Routes = [
   { path: "products", component: ProductListComponent },
   { path: "product/:id", component: SidebarComponent, children:[
     {
+      path: "",
+      redirectTo: 'chat', pathMatch: 'full'
+    },
+    {
       path: "chat",
       component: ProductListSidebarComponent,
-      outlet: "sidebar"
+      outlet: "chat"
     }
   ]},
   // {

@@ -2,6 +2,9 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: "sidebar",
-  templateUrl: "sidebar.component.html"
+  templateUrl: "sidebar.component.html",
 })
-export class SidebarComponent {}
+export class SidebarComponent {
+
+
+}
