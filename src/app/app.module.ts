@@ -13,6 +13,7 @@ import { ProductDetailComponent } from "./product-detail/product-detail.componen
 import { SidebarComponent } from "./sidebar/sidebar.component";
 
 import { routingModule } from "./routing.module";
+import {ProductVciComponent} from './product-vci/product-vci.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { routingModule } from "./routing.module";
     ProductListComponent,
     ProductDetailComponent,
     SidebarComponent,
-    ProductListSidebarComponent
+    ProductListSidebarComponent,
+    ProductVciComponent
   ],
   imports: [BrowserModule, routingModule],
   providers: [],

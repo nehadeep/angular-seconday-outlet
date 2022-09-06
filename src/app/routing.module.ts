@@ -4,25 +4,31 @@ import { ProductListComponent } from "./product-list/product-list.component";
 import { ProductDetailComponent } from "./product-detail/product-detail.component";
 import { SidebarComponent } from "./sidebar/sidebar.component";
 import { ProductListSidebarComponent } from "./product-list-sidebar/product-list-sidebar.component";
+import {ProductVciComponent} from './product-vci/product-vci.component';
 
 const routes: Routes = [
   { path: "products", component: ProductListComponent },
-  { path: "product/:id", component: SidebarComponent, children:[
+  { path: "product/:id", component: ProductListComponent, children:[
     {
       path: "",
       redirectTo: 'chat', pathMatch: 'full'
     },
     {
-      path: "chat",
+      path: "chat/:id",
       component: ProductListSidebarComponent,
       outlet: "chat"
     }
   ]},
-  // {
-  //   path: "",
-  //   component: SidebarComponent,
-  //   outlet: "sidebar"
-  // },
+  {
+    path: "vci/:id",
+    component: ProductVciComponent, children:[
+      {
+        path: "chat/:id",
+        component: ProductListSidebarComponent,
+        outlet: "chat"
+      }
+    ]
+  },
   // {
   //   path: "chat",
   //   component: ProductListSidebarComponent,

@@ -7,8 +7,13 @@
 	</a> -->
 	<!-- [routerLink]="[['/product/',product.id],{ outlets: {'sidebar': ['chat'] } }]" -->
 	<a (click)="testurl(product)">{{product.name}}</a>
+    <a (click)="gotovci(product)">VCI</a>
 		<!-- <a [routerLink]="['/product/', product.id]">{{product.name}}</a> -->
 	</li>
 </ul>
 
 <a routerLink="/">Go To Home</a>
+
+<div class="promise-chat-box">
+  <router-outlet name="chat"></router-outlet>
+</div>

@@ -22,6 +22,10 @@ export class ProductListComponent {
 
   }
   testurl(product){
-    this.router.navigate([`/product/${product.id}`,{ outlets: {'chat': ['chat'] } }]);
+    this.router.navigate([`/product/${product.id}`,{ outlets: {'chat': ['chat', product.id] } }]);
+  }
+
+  gotovci(product){
+    this.router.navigate([`vci/${product.id}`,{ outlets: {'chat': ['chat', product.id] } }])
   }
 }
